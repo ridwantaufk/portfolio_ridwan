@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>RIDWAN-WEB - Programmer Portfolio</title>
+    <title>RIDWAN-WEB || Programmer Portfolio</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <meta content="Free Website Template" name="keywords" />
     <meta content="Free Website Template" name="description" />
@@ -31,6 +31,10 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet" />
+
+    <!-- AJAX -->
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="js/message.js"></script>
   </head>
 
   <body data-spy="scroll" data-target=".navbar" data-offset="51">
@@ -664,14 +668,14 @@
     </div>
     <!-- Testimonial End -->
 
-    <!-- Team Start -->
+    <!-- Bio Start -->
     <div class="team" id="team">
       <div class="container">
         <div
           class="section-header text-center wow zoomIn"
           data-wow-delay="0.1s"
         >
-          <p>Bio Saya</p>
+          <p>My Bio</p>
           <h2>Biodata Singkat</h2>
         </div>
         <div class="row">
@@ -746,11 +750,7 @@
             <div class="col-md-8">
               <div class="contact-form">
                 <div id="success"></div>
-                <form
-                  name="sentMessage"
-                  id="contactForm"
-                  novalidate="novalidate"
-                >
+                <form name="sentMessage" id="contactForm" method="POST">
                   <div class="control-group">
                     <input
                       type="text"
@@ -758,7 +758,7 @@
                       id="name"
                       placeholder="Masukan Nama Kamu"
                       required="required"
-                      data-validation-required-message="Please enter your name"
+                      data-validation-required-message="Nama kamu masih kosong"
                     />
                     <p class="help-block"></p>
                   </div>
@@ -768,8 +768,7 @@
                       class="form-control"
                       id="email"
                       placeholder="Email"
-                      required="required"
-                      data-validation-required-message="Please enter your email"
+                      data-validation-required-message="Silahkan masukkan email yang benar"
                     />
                     <p class="help-block"></p>
                   </div>
@@ -779,8 +778,6 @@
                       class="form-control"
                       id="subject"
                       placeholder="Subjek Pesan"
-                      required="required"
-                      data-validation-required-message="Please enter a subject"
                     />
                     <p class="help-block"></p>
                   </div>
@@ -788,16 +785,24 @@
                     <textarea
                       class="form-control"
                       id="message"
-                      placeholder="Isi Pesan 🤓"
+                      placeholder="Isi Pesanmu"
                       required="required"
-                      data-validation-required-message="Please enter your message"
+                      data-validation-required-message="Pesan kamu masih kosong"
                     ></textarea>
                     <p class="help-block"></p>
                   </div>
                   <div>
-                    <button class="btn" type="submit" id="sendMessageButton">
-                      Kirim Pesan
-                    </button>
+                    <input
+                      class="btn"
+                      type="submit"
+                      id="sendMessageButton"
+                      onclick="SubmitFormData()"
+                      value="Kirim Pesan"
+                    />
+                  </div>
+                  <br />
+                  <div id="results">
+                    <!-- Hasil -->
                   </div>
                 </form>
               </div>
