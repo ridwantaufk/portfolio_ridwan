@@ -344,6 +344,15 @@ a:focus {
 /*******************************/
 /********** Hero CSS ***********/
 /*******************************/
+.video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .hero {
   position: relative;
   width: 100%;
@@ -495,6 +504,15 @@ a:focus {
 }
 
 @media (max-width: 575.98px) {
+  .video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
   .hero .hero-text p {
     font-size: 16px;
   }
@@ -1477,6 +1495,11 @@ a:focus {
   font-size: 14px;
   font-style: italic;
   color: #ffffff;
+}
+
+#warning-name,
+#warning-message {
+  color: red;
 }
 
 @media (max-width: 767.98px) {
