@@ -71,9 +71,26 @@
       </div>
     </div>
     <!-- Nav Bar End -->
-
+    <audio
+      autoplay
+      style="
+        display: none;
+        position: fixed;
+        z-index: 99;
+        bottom: 15px;
+        left: 15px;
+      "
+    >
+      <source src="music/FOR THE DAMAGED CODA.mp3" type="audio/mp3" />
+    </audio>
     <!-- Hero Start -->
     <div class="hero" id="home">
+      <!-- video -->
+      <video class="video" autoplay loop muted>
+        <source src="video/technology.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+
       <div class="container-fluid">
         <div class="row align-items-center">
           <div class="col-sm-12 col-md-6">
@@ -100,7 +117,11 @@
           </div>
           <div class="col-sm-12 col-md-6 d-none d-md-block">
             <div class="hero-image">
-              <img src="img/hero.png" alt="Hero Image" />
+              <img
+                src="img/hero.png"
+                alt="Hero Image"
+                style="visibility: hidden"
+              />
             </div>
           </div>
         </div>
@@ -226,10 +247,9 @@
               <div class="service-text">
                 <h3>Web Development</h3>
                 <p>
-                  Dalam pengembangan web saya memiliki kemampuan dengan bahasa
-                  pemrograman javaScript, typeScript, PHP serta bahasa query
-                  berbasis SQL. Dapat menggunakan library reactJs dan jQuery,
-                  serta framework berbasis laravel, vueJs dan angularJs
+                  Memiliki kemampuan javaScript, PHP serta bahasa query SQL.
+                  Menggunakan library reactJs dan jQuery, serta framework
+                  laravel dan vueJs.
                 </p>
               </div>
             </div>
@@ -362,8 +382,8 @@
           class="section-header text-center wow zoomIn"
           data-wow-delay="0.1s"
         >
-          <p>My Portfolio</p>
-          <h2>My Excellent Portfolio</h2>
+          <p>Portfolio</p>
+          <h2>Portfolio Teratas Saya</h2>
         </div>
         <div class="row">
           <div class="col-12">
@@ -761,6 +781,7 @@
                       data-validation-required-message="Nama kamu masih kosong"
                     />
                     <p class="help-block"></p>
+                    <p id="warning-name"></p>
                   </div>
                   <div class="control-group">
                     <input
@@ -790,15 +811,18 @@
                       data-validation-required-message="Pesan kamu masih kosong"
                     ></textarea>
                     <p class="help-block"></p>
+                    <p id="warning-message"></p>
                   </div>
                   <div>
-                    <input
+                    <button
                       class="btn"
-                      type="submit"
+                      type="button"
                       id="sendMessageButton"
+                      name="submit"
                       onclick="SubmitFormData()"
-                      value="Kirim Pesan"
-                    />
+                    >
+                      Kirim Pesan
+                    </button>
                   </div>
                   <br />
                   <div id="results">
@@ -830,7 +854,7 @@
                 <img src="img/blog-1.jpg" alt="Blog" />
               </div>
               <div class="blog-text">
-                <h2>Kesadaran Psikologi</h2>
+                <h2>Kesadaran Psikologi Dalam Berselancar</h2>
                 <div class="blog-meta">
                   <p><i class="far fa-user"></i>Ridwan</p>
                   <p><i class="far fa-list-alt"></i>Psikologi</p>
@@ -841,9 +865,9 @@
                   Tidak Pernah hilang apa yang disebut ilmu pengetahuan. Saat
                   yang berharga ketika kita memahami psikis dengan menyadari
                   beberapa point penting untuk menjaga stabilitas diri terhadap
-                  lingkungan. Psikologi telah membentuk itu supaya manusia dapat
-                  melakukan kegiatan preventif dalam menghadapi resiko-resiko
-                  yang akan datang terhadap dirinya...
+                  lingkungan teknologi. Psikologi telah membentuk itu supaya
+                  manusia dapat melakukan kegiatan preventif dalam menghadapi
+                  resiko-resiko yang akan datang terhadap dirinya...
                 </p>
                 <a class="btn" href=""
                   >Baca Selengkapnya <i class="fa fa-angle-right"></i
